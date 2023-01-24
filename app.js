@@ -17,5 +17,8 @@ const librarySection = document.querySelector('.library');
 let booksData = [];
 
 window.addEventListener('load', async () => {
-    const books = getBooks();
+    const books = await getBooks();
+
+    booksData = books;
+    console.log(booksData);
 });
