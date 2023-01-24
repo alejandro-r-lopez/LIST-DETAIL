@@ -32,3 +32,12 @@
         -   render div
         -   append div
     -   display book details div
+
+# SLICES
+
+-   SLICE 1: FETCH ALL BOOK DATA
+    -   add supabase SCRIPT, URL, and KEY
+-   SLICE 2: DISPLAY BOOKS
+-   SLICE 3: FETCH SINGLE BOOK DATA
+-   SLICE 4: DISPLAY BOOK DETAIL PAGE ON CLICK
+    -
