@@ -1,6 +1,7 @@
 /* Imports */
 
 import { getBooks } from './fetch-utils.js';
+import { renderBooks } from './render-utils.js';
 
 /* Get DOM Elements */
 
@@ -22,14 +23,10 @@ window.addEventListener('load', async () => {
     booksData = books;
 
     for (let book of booksData) {
-        const bookContainer = document.createElement('div');
-        const bookInfo = document.createElement('p');
-
-        bookInfo.textContent = book.book_title;
-
-        bookContainer.append(bookInfo);
+        const bookContainer = renderBooks(book);
 
         librarySection.append(bookContainer);
     }
+
     return librarySection;
 });
