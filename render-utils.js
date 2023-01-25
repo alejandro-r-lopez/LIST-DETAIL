@@ -4,7 +4,7 @@ export function renderBooks(book) {
 
     bookContainer.classList.add('book-style');
 
-    bookInfo.textContent = book.book_title;
+    bookInfo.textContent = book.title;
     bookContainer.href = `detail/?id=${book.genre_id}`;
 
     bookContainer.append(bookInfo);
@@ -14,11 +14,17 @@ export function renderBooks(book) {
 
 export function renderBook(book) {
     const bookDetailsContainer = document.createElement('div');
+    const bookTitle = document.createElement('h1');
+    const bookGenre = document.createElement('p');
+    const bookYear = document.createElement('p');
     const bookInfo = document.createElement('p');
 
+    bookTitle.textContent = book.title;
     bookInfo.textContent = book.summary;
+    bookGenre.textContent = book.book_genres.genre;
+    bookYear.textContent = book.publication_year;
 
-    bookDetailsContainer.append(bookInfo);
+    bookDetailsContainer.append(bookTitle, bookGenre, bookYear, bookInfo);
 
     return bookDetailsContainer;
 }
