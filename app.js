@@ -22,11 +22,14 @@ window.addEventListener('load', async () => {
 
     booksData = books;
 
+    displayBooks();
+});
+
+function displayBooks() {
+    librarySection.textContent = '';
     for (let book of booksData) {
         const bookContainer = renderBooks(book);
 
         librarySection.append(bookContainer);
     }
-
-    return librarySection;
-});
+}

@@ -9,3 +9,13 @@ export async function getBooks() {
 
     return data;
 }
+
+export async function getBook(id) {
+    const { data, error } = await client
+        .from('books')
+        .select(`*, book_genres (genre)`)
+        .eq('id', id)
+        .single();
+
+    return data;
+}

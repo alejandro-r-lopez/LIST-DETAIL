@@ -36,12 +36,26 @@
 # SLICES
 
 -   SLICE 1: FETCH ALL BOOK DATA
+
     -   add supabase SCRIPT, URL, and KEY
-    -   fetch-utils.js
+    -   create fetch-utils.js
         -   getBooks();
     -   add books to state
+
 -   SLICE 2: DISPLAY BOOKS
-    -   render-utils.js
+
+    -   create render-utils.js
         -   renderBooks();
+    -   append to DOM
+
 -   SLICE 3: FETCH SINGLE BOOK DATA
+
+    -   create getBook();
+    -   add book to state
+    -   reference URL to collect id
+
 -   SLICE 4: DISPLAY BOOK DETAIL PAGE ON CLICK
+    -   add event listener to links
+        -   render div
+        -   append div
+    -   display book details div
