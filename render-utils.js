@@ -2,6 +2,8 @@ export function renderBooks(book) {
     const bookContainer = document.createElement('a');
     const bookInfo = document.createElement('p');
 
+    bookContainer.classList.add('book-style');
+
     bookInfo.textContent = book.book_title;
     bookContainer.href = `detail/?id=${book.genre_id}`;
 
